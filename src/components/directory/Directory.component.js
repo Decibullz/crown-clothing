@@ -33,6 +33,7 @@ class Directory extends Component {
           size: 'large',
           id: 4,
           linkUrl: 'shop/womens',
+          // eslint-disable-next-line
           size: 'large',
         },
         {
@@ -41,6 +42,7 @@ class Directory extends Component {
           size: 'large',
           id: 5,
           linkUrl: 'shop/mens',
+          // eslint-disable-next-line
           size: 'large',
         },
       ],
@@ -50,7 +52,7 @@ class Directory extends Component {
     return (
       <div className="directory-menu">
         {this.state.sections.map(({ title, imageUrl, id, size }) => (
-          <MenuItem title={title} key={id} imageUrl={imageUrl} size={size} />
+          <MenuItem title={title} imageUrl={imageUrl} size={size} key={id} />
         ))}
       </div>
     )
