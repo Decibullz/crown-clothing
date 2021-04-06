@@ -24,6 +24,11 @@ export const selectCollections = createSelector(
 //     )
 //   )
 
+export const selectCollectionsForPreview = createSelector(
+  [selectCollections],
+  (collections) => Object.keys(collections).map((key) => collections[key])
+)
+
 //  used after data normalization
 export const selectCollection = (collectionUrlParam) =>
   createSelector(
